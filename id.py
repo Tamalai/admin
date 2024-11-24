@@ -11,13 +11,7 @@ import streamlit_authenticator as stauth
 import streamlit.components.v1 as components
 from openai import OpenAI  # Make sure to install the OpenAI package
 
-# Paths to necessary files
-CREDENTIALS_FILE = "C:\\Users\\edward\\doc\\credentialss.yaml"
-E_JSON_FILE = "U:\\doc\\e.json"
-JSON_FILES_MAPPING_FILE = "C:\\Users\\edward\\doc\\json_files_mapping.json"
-STOP_WORDS_FILE = "C:\\Users\\edward\\doc\\heb_stopwords.txt"
-LOGO_PATH = "C:\\Users\\edward\\images\\logo.png"
-TAMAL_PATH = "C:\\Users\\edward\\images\\tamal.png"
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Load the configuration from the YAML file
 with open(CREDENTIALS_FILE, encoding='utf-8') as file:
