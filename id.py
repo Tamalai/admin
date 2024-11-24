@@ -13,10 +13,13 @@ from openai import OpenAI  # Make sure to install the OpenAI package
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Load the configuration from the YAML file
-with open(CREDENTIALSS_FILE, encoding='utf-8') as file:
-    config = yaml.safe_load(file)
+# Define the path to your credentials YAML file
+CREDENTIALS_FILE = os.path.join(script_dir, 'credentialss.yaml')
 
+# Load the configuration from the YAML file
+with open(CREDENTIALS_FILE, encoding='utf-8') as file:
+    config = yaml.safe_load(file)
+    
 # Initialize the authenticator
 authenticator = stauth.Authenticate(
     config['credentialss'],
